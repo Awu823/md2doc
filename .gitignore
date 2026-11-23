@@ -11,6 +11,9 @@ venv/
 _body.md
 _content.docx
 
+# Source Markdown documents (place your own .md here, not tracked)
+input/*.md
+
 # Generated Word output (regenerate with run.bat)
 output/*.docx
 
