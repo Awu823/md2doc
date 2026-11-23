@@ -13,10 +13,11 @@ md2doc/
 ├─ run.bat                     # 一键构建入口（Windows）
 ├─ src/
 │  └─ md2docx.py               # 通用转换 CLI（可复用，核心工具）
+│  └─ desensitize_template.py  # 模板脱敏工具（清除示例内容）
 ├─ config/
 │  └─ md2docx.json             # 当前文档配置
 ├─ templates/
-│  └─ template.docx            # 企业模板（排版基准）
+│  └─ template.docx            # 企业模板（已脱敏）（排版基准）
 ├─ input/
 │  └─ <文档>.md                # 源 Markdown（放入此目录）
 ├─ output/
@@ -261,5 +262,8 @@ A：模板的封面表格结构、标题样式（Heading1/2/3 缩进）、列表
 ## 相关文件
 
 - `src\md2docx.py`：核心转换 CLI（可复用，全部逻辑在此）。
+- `src\desensitize_template.py`：模板脱敏工具（清除模板内嵌的示例正文/封面值，
+  保留封面/History/TOC 结构、标题骨架、页眉页脚、样式与编号；原模板备份到
+  `archive\template_original.docx`，已 git 忽略）。
 - `config\md2docx.json`：当前文档配置。
 - `archive\build_docx.py`：早期单文档版本（仅参考，不再维护）。

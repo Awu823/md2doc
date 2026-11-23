@@ -17,6 +17,9 @@ input/*.md
 # Generated Word output (regenerate with run.bat)
 output/*.docx
 
+# Sensitive original template backup (keep local only)
+archive/template_original.docx
+
 # Word / Office temp & lock files
 ~$*.docx
 ~$*.doc*
