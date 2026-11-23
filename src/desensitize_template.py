@@ -3,8 +3,8 @@
 Desensitize templates/template.docx (backup kept at archive/template_original.docx).
 
 Keeps the template's skeleton: cover (Document Information + History tables),
-TOC, header/footer, styles and heading numbering. Removes the embedded Roche
-example body (paragraphs and content tables after the first Heading1), replaces
+TOC, header/footer, styles and heading numbering. Removes the embedded example
+body (paragraphs and content tables after the first Heading1), replaces
 each heading's body with a neutral placeholder, replaces the cover Document Name
 / Associated Documents / History values with placeholders, and clears the
 docProps creator/title metadata.

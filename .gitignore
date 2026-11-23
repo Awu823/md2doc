@@ -23,6 +23,10 @@ output/*.docx
 # Sensitive original template backup (keep local only)
 archive/template_original.docx
 
+# Historical scripts/reports (kept locally, not tracked)
+archive/*.py
+archive/*.md
+
 # Word / Office temp & lock files
 ~$*.docx
 ~$*.doc*

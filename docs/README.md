@@ -54,7 +54,7 @@ pip install python-docx lxml
 ### 方式 1：一键构建（推荐，Windows）
 
 ```powershell
-cd C:\Users\dongr9\Documents\Workspace\md2doc
+cd C:\path\to\md2doc
 .\run.bat
 ```
 
@@ -79,7 +79,7 @@ python src\md2docx.py --config config\md2docx.json
 ```
 body start line: 54 | body md lines: 372
 pandoc done -> C:\...\_content.docx
-saved: C:\...\output\DS_CN_MA_Production BOM Interface From S4H To ECMS.docx
+saved: C:\...\output\your_document.docx
 cleaned temp files
 ```
 
@@ -156,9 +156,9 @@ python src\md2docx.py my_new_doc.md --keep-temp -o output\my_new_doc.docx
 
 ```json
 {
-  "md": "DS_CN_MA_Production BOM Interface From S4H To ECMS.md",
+  "md": "your_document.md",
   "template": "template.docx",
-  "output": "DS_CN_MA_Production BOM Interface From S4H To ECMS.docx",
+  "output": "your_document.docx",
   "body_start": null,
   "doc_name": null,
   "doc_assoc": null,
@@ -222,7 +222,7 @@ python src\md2docx.py my_new_doc.md --keep-temp -o output\my_new_doc.docx
 构建完成后可用以下命令快速检查产物：
 
 ```powershell
-python -c "import docx; d=docx.Document(r'output\DS_CN_MA_Production BOM Interface From S4H To ECMS.docx'); print('tables=',len(d.tables),'headings=',sum(1 for p in d.paragraphs if p.style.name.startswith('Heading')),'cover=',repr(d.tables[0].rows[0].cells[1].text.strip()))"
+python -c "import docx; d=docx.Document(r'output\your_document.docx'); print('tables=',len(d.tables),'headings=',sum(1 for p in d.paragraphs if p.style.name.startswith('Heading')),'cover=',repr(d.tables[0].rows[0].cells[1].text.strip()))"
 ```
 
 - 预期 `tables=13`、`headings=18`、`cover` 为文档名。
