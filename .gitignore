@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Virtual environment
+.venv/
+venv/
+
+# Intermediates produced by md2docx.py
+_body.md
+_content.docx
+
+# Generated Word output (regenerate with run.bat)
+output/*.docx
+
+# Word / Office temp & lock files
+~$*.docx
+~$*.doc*
+*.tmp
+
+# OS
+Thumbs.db
+.DS_Store
