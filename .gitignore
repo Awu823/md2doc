@@ -14,6 +14,9 @@ _content.docx
 # Source Markdown documents (place your own .md here, not tracked)
 input/*.md
 
+# Corporate template (provide your own; not tracked)
+templates/*.docx
+
 # Generated Word output (regenerate with run.bat)
 output/*.docx
 
